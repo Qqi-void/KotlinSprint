@@ -7,9 +7,9 @@ fun main() {
     println(numberOfOrders)
     println(thankYouMessage)
 
-    var numberOfEmployees: Int = 15
+    var numberOfEmployees: Int = 2000
 //    println(numberOfEmployees)
 
-    numberOfEmployees = 14
+    numberOfEmployees = 1999
     println(numberOfEmployees)
 }
