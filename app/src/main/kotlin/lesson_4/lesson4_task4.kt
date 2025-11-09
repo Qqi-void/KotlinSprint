@@ -2,13 +2,15 @@ package org.example.app.lesson_4
 
 fun main() {
     val day = 5
+    val isEven = day % 2 == 0
 
-    val isArmsDay = day % 2 != 0
-    val isPressDay = day % 2 != 0
-    val isLegsDay = day % 2 == 0
-    val isBackDay = day % 2 == 0
+    val isArmsDay = !isEven
+    val isPressDay = !isEven
+    val isLegsDay = isEven
+    val isBackDay = isEven
 
-    println("""
+    println(
+        """
         Упражнения для рук:    $isArmsDay
         Упражнения для ног:    $isLegsDay
         Упражнения для спины:  $isBackDay
