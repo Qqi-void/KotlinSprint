@@ -2,15 +2,14 @@ package org.example.app.lesson_5
 
 import kotlin.random.Random
 
+const val MIN_NUMBER = 0
+const val MAX_NUMBER = 42
 
 fun main() {
-    val minNumber = 0
-    val maxNumber = 42
     val numbersToGuess = 3
+    val winningNumbers = List(numbersToGuess) { Random.nextInt(MIN_NUMBER, MAX_NUMBER + 1) }.toSet().toList()
 
-    val winningNumbers = List(numbersToGuess) { Random.nextInt(minNumber, maxNumber + 1) }.toSet().toList()
-
-    println("Угадайте $numbersToGuess числа от $minNumber до $maxNumber.")
+    println("Угадайте $numbersToGuess числа от $MIN_NUMBER до $MAX_NUMBER.")
 
     val userNumbers = mutableListOf<Int>()
     repeat(numbersToGuess) { i ->
