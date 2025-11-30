@@ -1,16 +1,16 @@
 package org.example.app.lesson_5
 
-const val MIN_NUMBER = 0
-const val MAX_NUMBER = 42
+const val MINIM_NUMBER = 0
+const val MAXIM_NUMBER = 42
 
 fun main() {
     val winningNumber1 = 17
     val winningNumber2 = 40
 
-    print("Введите первое число (от $MIN_NUMBER до $MAX_NUMBER): ")
+    print("Введите первое число (от $MINIM_NUMBER до $MAXIM_NUMBER): ")
     val userNumber1 = readln().toInt()
 
-    print("Введите второе число (от $MIN_NUMBER до $MAX_NUMBER): ")
+    print("Введите второе число (от $MINIM_NUMBER до $MAXIM_NUMBER): ")
     val userNumber2 = readln().toInt()
 
     val resultText = when {
