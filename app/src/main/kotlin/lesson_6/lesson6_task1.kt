@@ -12,18 +12,17 @@ fun main() {
     var inputLogin: String
     var inputPassword: String
 
-    while (true) {
+    do {
         print("Введите логин: ")
         inputLogin = readln()
 
         print("Введите пароль: ")
         inputPassword = readln()
 
-        if (inputLogin == createdLogin && inputPassword == createdPassword) {
-            println("Авторизация прошла успешно")
-            break
-        } else {
+        if (inputLogin != createdLogin || inputPassword != createdPassword) {
             println("Неверный логин или пароль, попробуйте снова.\n")
         }
-    }
+    } while (inputLogin != createdLogin || inputPassword != createdPassword)
+
+    println("Авторизация прошла успешно")
 }
