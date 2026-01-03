@@ -6,13 +6,13 @@ fun main() {
     var attemptsLeft = 3
 
     while (attemptsLeft > 0) {
-        val a = Random.nextInt(1, 10)
-        val b = Random.nextInt(1, 10)
+        val firstNumber = Random.nextInt(1, 10)
+        val secondNumber = Random.nextInt(1, 10)
 
-        println("Решите пример: $a + $b = ?")
+        println("Решите пример: $firstNumber + $secondNumber = ?")
         val answer = readln().toInt()
 
-        if (answer == a + b) {
+        if (answer == firstNumber + secondNumber) {
             println("Добро пожаловать!")
             return
         } else {
