@@ -11,6 +11,7 @@ fun main() {
 
     var inputLogin: String
     var inputPassword: String
+    var isAuthorized: Boolean
 
     do {
         print("Введите логин: ")
@@ -19,10 +20,12 @@ fun main() {
         print("Введите пароль: ")
         inputPassword = readln()
 
-        if (inputLogin != createdLogin || inputPassword != createdPassword) {
+        isAuthorized = inputLogin == createdLogin && inputPassword == createdPassword
+
+        if (!isAuthorized) {
             println("Неверный логин или пароль, попробуйте снова.\n")
         }
-    } while (inputLogin != createdLogin || inputPassword != createdPassword)
+    } while (!isAuthorized)
 
     println("Авторизация прошла успешно")
 }
